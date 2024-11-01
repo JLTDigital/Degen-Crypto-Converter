@@ -2,10 +2,16 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    fontFamily: {
-      display: ['Tiny5', 'sans-serif']
-    },
-    extend: {}
+    extend: {
+      colors: {
+        p1: '#ff3399',
+        p2: '#000000',
+        p3: '#ffffff'
+      },
+      fontFamily: {
+        display: ['Tiny5', 'sans-serif']
+      }
+    }
   },
   plugins: []
 }

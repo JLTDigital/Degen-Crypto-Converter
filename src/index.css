@@ -10,12 +10,26 @@
     height: 100vh;
     overflow: hidden;
   }
+
+  /* h1,
+  h2 {
+    color: #ff3399;
+  } */
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.text-shadow {
+  text-shadow: 2px 4px #545454;
 }
 
 .dark-bg:before {
@@ -26,7 +40,7 @@
   left: 0;
   height: 100%;
   background-color: #000000;
-  opacity: 0.3;
+  opacity: 0.1;
   background-image: linear-gradient(
       30deg,
       #ff3399 12%,
@@ -81,7 +95,7 @@
 
 .dark-bg::after {
   content: '';
-  background-image: radial-gradient(#ff339977 0%, transparent 0%, #000 0%);
+  background-image: radial-gradient(#450726 0%, #000 75%);
   content: '';
   position: absolute;
   top: 0;
