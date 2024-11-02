@@ -47,33 +47,45 @@ const HeaderNav = () => {
             isOpen ? 'block' : 'hidden'
           )}
           id='navbar-sticky'>
-          <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-slate-800 opacity-90 md:dark:bg-black dark:border-gray-700'>
+          <ul className='flex flex-col p-4 mt-4 font-medium rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-slate-800 opacity-90 md:dark:bg-black dark:border-gray-700'>
             <li>
               <a
                 href='#'
                 className='block py-4 px-3 text-p1 rounded md:bg-transparent md:text-p1 md:p-0 md:dark:text-p1 hover:text-white border-b border-gray-200 md:border-none'>
-                Home
+                <span className='flex'>
+                  Home
+                  <img src='/assets/images/arrow_down.svg' alt='Arrow Down' />
+                </span>
               </a>
             </li>
             <li>
               <a
                 href='#'
                 className='block py-4 px-3 rounded md:hover:text-white md:p-0 md:dark:hover:text-white dark:text-p1 dark:hover:text-white dark:border-gray-200 border-b md:border-none'>
-                Exchange
+                <span className='flex'>
+                  Exchange
+                  <img src='/assets/images/arrow_down.svg' alt='Arrow Down' />
+                </span>
               </a>
             </li>
             <li>
               <a
                 href='#'
                 className='block py-4 px-3 rounded md:hover:text-white md:p-0 md:dark:hover:text-white dark:text-p1 dark:hover:text-white dark:border-gray-200 border-b md:border-none'>
-                Marketplace
+                <span className='flex'>
+                  Marketplace
+                  <img src='/assets/images/arrow_down.svg' alt='Arrow Down' />
+                </span>
               </a>
             </li>
             <li>
               <a
                 href='#'
                 className='block py-4 px-3 rounded hover:bg-gray-100 md:p-0 md:dark:hover:hover:text-white dark:text-p1 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-200 border-b md:border-none'>
-                Treasury
+                <span className='flex'>
+                  Treasury
+                  <img src='/assets/images/arrow_down.svg' alt='Arrow Down' />
+                </span>
               </a>
             </li>
           </ul>
