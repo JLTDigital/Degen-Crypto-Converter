@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from './sections/Header'
+import HeaderNav from './sections/HeaderNav'
 
 const App = () => {
   return (
     <div className='dark-bg'>
-      <Header />
+      <HeaderNav />
     </div>
   )
 }
