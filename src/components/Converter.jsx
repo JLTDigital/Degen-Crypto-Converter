@@ -1,6 +1,5 @@
 import React from 'react'
 import CryptoConverter from './CryptoConverter'
-// import { cryptos } from '../constants/index.js'
 
 const Converter = ({ title }) => {
   return (
@@ -10,7 +9,7 @@ const Converter = ({ title }) => {
       <div className='text-white rounded-xl border border-gray-100 w-full md:w-2/4 grid grid-cols-1 bg-black opacity-80'>
         <CryptoConverter />
       </div>
-      <button className='refresh-btn text-p1 p-2 md:w-2/4 w-full mt-4 rounded-2xl bg-black border border-[#ff3399]'>
+      <button className='refresh-btn cursor-pointer z-10 text-p1 p-2 md:w-2/4 w-full mt-4 rounded-2xl bg-black border border-[#ff3399]'>
         Refresh Price
       </button>
     </div>
