@@ -1,9 +1,9 @@
 import React from 'react'
 import Converter from '../components/Converter'
 
-const Main = () => {
+const MainSection = () => {
   return (
-    <section className='w-full min-h-screen mx-auto my-auto flex justify-center items-center'>
+    <section className='w-full relative md:min-h-screen mx-auto my-auto flex justify-center items-center'>
       <div className='container'>
         <div className='md:p-12 p-4'>
           <Converter title='Currency Converter' />
@@ -13,4 +13,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default MainSection

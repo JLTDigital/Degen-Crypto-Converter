@@ -1,15 +1,15 @@
 import React from 'react'
-import HeaderNav from './sections/HeaderNav'
-import Main from './sections/Main'
-import Footer from './sections/Footer'
+import HeaderNav from './sections/HeaderNav.jsx'
+import MainSection from './sections/MainSection.jsx'
+import Footer from './sections/Footer.jsx'
 
 const App = () => {
   return (
-    <div className='dark-bg'>
+    <main className='dark-bg'>
       <HeaderNav />
-      <Main />
+      <MainSection />
       <Footer />
-    </div>
+    </main>
   )
 }
 

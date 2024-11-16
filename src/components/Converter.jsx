@@ -22,7 +22,7 @@ const Converter = ({ title }) => {
       {hidden === true ? (
         <div className='container text-center justify-center hidden'></div>
       ) : (
-        <div className='container text-center justify-center'>
+        <div className='container text-center justify-center mt-4 md:mt-8 mb-10'>
           <Info cryptoInfo={cryptoInfo} />
         </div>
       )}

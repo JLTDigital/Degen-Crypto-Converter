@@ -6,7 +6,7 @@ const Info = ({ cryptoInfo }) => {
       <div className='flex justify-center'>
         <img className='w-1/4' src={cryptoInfo.image} alt={cryptoInfo.name} />
       </div>
-      <ul className='text-white'>
+      <ul className='text-white pt-2 md:pt-4'>
         <li>{cryptoInfo.symbol}</li>
         <br />
         <li>Name: {cryptoInfo.name}</li>
