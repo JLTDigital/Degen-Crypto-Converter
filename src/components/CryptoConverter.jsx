@@ -1,18 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react'
-// import { cryptos } from '../constants/index.js'
+import { cryptos, fiat } from '../constants/index.js'
 
-const CryptoConverter = () => {
+const CryptoConverter = ({ sendDataToParent }) => {
   const [currencyOne, setCurrencyOne] = useState('bitcoin')
   const [currencyTwo, setCurrencyTwo] = useState('gbp')
   const [amountOne, setAmountOne] = useState('')
   const [amountTwo, setAmountTwo] = useState('')
   const [infoData, setInfoData] = useState({})
-  const [cryptoHoldings, setCryptoHoldings] = useState([])
-  const [cryptoInput, setCryptoInput] = useState('')
-  const [warning, setWarning] = useState(false)
-  const [showHoldings, setShowHoldings] = useState(false)
+  const [shouldSendData, setShouldSendData] = useState(false)
 
-  // Fetch rates and update amountTwo based on amountOne input
   const getRatesInfo = () => {
     fetch(
       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currencyTwo}&ids=${currencyOne}`,
@@ -20,37 +16,32 @@ const CryptoConverter = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         const cryptoRate = data[0]?.current_price || 0
         setAmountTwo((amountOne * cryptoRate).toFixed(2))
+        setInfoData({
+          image: data[0]?.image,
+          symbol: data[0]?.symbol,
+          name: data[0]?.name,
+          currentPrice: data[0]?.current_price,
+          marketCap: data[0]?.market_cap,
+          marketCapRank: data[0]?.market_cap_rank,
+          high24h: data[0]?.high_24h,
+          low24h: data[0]?.low_24h,
+          priceChange24h: data[0]?.price_change_24h,
+          priceChangePercentage24h: data[0]?.price_change_percentage_24h,
+          circulatingSupply: data[0]?.circulating_supply
+        })
+        setShouldSendData(true)
       })
-    // getInfo()
   }
 
-  // Fetch and set cryptocurrency information for the info section
-  // const getInfo = () => {
-  //   fetch(
-  //     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currencyTwo}&ids=${currencyOne}`
-  //   )
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setInfoData({
-  //         image: data[0]?.image,
-  //         symbol: data[0]?.symbol,
-  //         name: data[0]?.name,
-  //         currentPrice: data[0]?.current_price,
-  //         marketCap: data[0]?.market_cap,
-  //         marketCapRank: data[0]?.market_cap_rank,
-  //         high24h: data[0]?.high_24h,
-  //         low24h: data[0]?.low_24h,
-  //         priceChange24h: data[0]?.price_change_24h,
-  //         priceChangePercentage24h: data[0]?.price_change_percentage_24h,
-  //         circulatingSupply: data[0]?.circulating_supply
-  //       })
-  //     })
-  // }
+  useEffect(() => {
+    if (shouldSendData) {
+      sendDataToParent(infoData)
+      setShouldSendData(false)
+    }
+  }, [infoData, shouldSendData, sendDataToParent])
 
-  // Fetch updated rates when currency selection or amount changes
   useEffect(() => {
     if (currencyOne && currencyTwo && amountOne) {
       getRatesInfo()
@@ -75,10 +66,11 @@ const CryptoConverter = () => {
             onChange={(e) => setCurrencyOne(e.target.value)}
             id='currency-one'
             className='bg-black text-white'>
-            <option value={currencyOne} defaultValue={currencyOne}>
-              BTC
-            </option>
-            <option>ETH</option>
+            {cryptos.map(({ id, currency, initial }) => (
+              <option key={id} value={currency} defaultValue={currencyOne}>
+                {initial}
+              </option>
+            ))}
           </select>
         </div>
       </div>
@@ -107,10 +99,11 @@ const CryptoConverter = () => {
             onChange={(e) => setCurrencyTwo(e.target.value)}
             id='currency-two'
             className='bg-black text-white text-lg'>
-            <option value={currencyTwo} defaultValue={currencyTwo}>
-              GBP
-            </option>
-            <option>USD</option>
+            {fiat.map(({ id, fiatName, initial }) => (
+              <option key={id} value={fiatName} defaultValue={currencyTwo}>
+                {initial}
+              </option>
+            ))}
           </select>
         </div>
       </div>

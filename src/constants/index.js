@@ -1,112 +1,125 @@
 export const cryptos = [
   {
     id: 0,
-    name: Bitcoin,
-    initial: BTC
+    currency: 'bitcoin',
+    initial: 'BTC'
   },
   {
     id: 1,
-    name: Ethereum,
-    initial: ETH
+    currency: 'ethereum',
+    initial: 'ETH'
   },
   {
     id: 2,
-    name: Ripple,
-    initial: XRP
+    currency: 'ripple',
+    initial: 'XRP'
   },
   {
     id: 3,
-    name: Litecoin,
-    initial: LTC
+    currency: 'litecoin',
+    initial: 'LTC'
   },
   {
     id: 4,
-    name: Stellar,
-    initial: XLM
+    currency: 'stellar',
+    initial: 'XLM'
   },
   {
     id: 5,
-    name: Tron,
-    initial: TRX
+    currency: 'tron',
+    initial: 'TRX'
   },
   {
     id: 6,
-    name: Chainlink,
-    initial: LINK
+    currency: 'chainlink',
+    initial: 'LINK'
   },
   {
     id: 7,
-    name: Dai,
-    initial: DAI
+    currency: 'dai',
+    initial: 'DAI'
   },
   {
     id: 8,
-    name: EOS,
-    initial: EOS
+    currency: 'eos',
+    initial: 'EOS'
   },
   {
     id: 9,
-    name: Maker,
-    initial: MKR
+    currency: 'maker',
+    initial: 'MKR'
   },
   {
     id: 10,
-    name: Tezos,
-    initial: XTZ
+    currency: 'tezos',
+    initial: 'XTZ'
   },
   {
     id: 11,
-    name: Uniswap,
-    initial: UNI
+    currency: 'uniswap',
+    initial: 'UNI'
   },
   {
     id: 12,
-    name: Cosmos,
-    initial: ATOM
+    currency: 'cosmos',
+    initial: 'ATOM'
   },
   {
     id: 13,
-    name: Augur,
-    initial: REP
+    currency: 'augur',
+    initial: 'REP'
   },
   {
     id: 14,
-    name: Neo,
-    initial: NEO
+    currency: 'neo',
+    initial: 'NEO'
   },
   {
     id: 15,
-    name: Dash,
-    initial: DASH
+    currency: 'dash',
+    initial: 'DASH'
   },
   {
     id: 16,
-    name: Tether,
-    initial: USDT
+    currency: 'tether',
+    initial: 'USDT'
   },
   {
     id: 17,
-    name: Polkadot,
-    initial: DOT
+    currency: 'polkadot',
+    initial: 'DOT'
   },
   {
     id: 18,
-    name: Monero,
-    initial: XMR
+    currency: 'monero',
+    initial: 'XMR'
   },
   {
     id: 19,
-    name: Aave,
-    initial: AAVE
+    currency: 'aave',
+    initial: 'AAVE'
   },
   {
     id: 20,
-    name: Waves,
-    initial: Waves
+    currency: 'waves',
+    initial: 'WAVES'
   },
   {
     id: 21,
-    name: Zcash,
-    initial: ZEC
+    currency: 'zcash',
+    initial: 'ZEC'
+  }
+]
+
+export const fiat = [
+  {
+    id: 0,
+    fiatName: 'gbp',
+    initial: 'GBP'
+  },
+  {
+    id: 1,
+    fiatName: 'usd',
+    initial: 'USD'
   }
 ]
