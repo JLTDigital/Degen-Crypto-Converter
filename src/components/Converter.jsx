@@ -12,8 +12,8 @@ const Converter = ({ title }) => {
   }
 
   return (
-    <div className='text-center p-4 grid md:grid-cols-2 grid-cols-1 justify-center items-center flex-col'>
-      <div className='container'>
+    <div className='text-center grid lg:grid-cols-2 flex flex-col justify-center items-center'>
+      <div className='container pl-4 pr-4'>
         <h2 className='text-p1 text-center text-2xl mb-4'>{title}</h2>
         <div className='text-white rounded-xl border border-gray-100 w-full grid grid-cols-1 bg-black opacity-80'>
           <CryptoConverter sendDataToParent={handleDataFromChild} />
@@ -22,7 +22,7 @@ const Converter = ({ title }) => {
       {hidden === true ? (
         <div className='container text-center justify-center hidden'></div>
       ) : (
-        <div className='container text-center justify-center mt-4 md:mt-8 mb-10'>
+        <div className='container text-center justify-center mt-2 md:mt-4 md:mb-7'>
           <Info cryptoInfo={cryptoInfo} />
         </div>
       )}

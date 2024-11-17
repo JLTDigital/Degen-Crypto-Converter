@@ -50,7 +50,7 @@ const CryptoConverter = ({ sendDataToParent }) => {
 
   return (
     <div>
-      <div className='currency-one-container rounded-xl w-full py-10 flex justify-between'>
+      <div className='currency-one-container rounded-xl w-full lg:py-10 py-2 flex justify-between'>
         <div className='p-2 w-1/2 text-left ml-4'>
           <p className='text-lg'>Crypto Amount</p>
           <input
@@ -83,7 +83,7 @@ const CryptoConverter = ({ sendDataToParent }) => {
         />
       </div>
 
-      <div className='currency-two-container rounded-xl w-full py-10 flex justify-between'>
+      <div className='currency-two-container rounded-xl w-full lg:py-10 py-2 flex justify-between'>
         <div className='p-2 w-1/2 text-left ml-4'>
           <p className='text-lg'>Fiat Amount</p>
           <input

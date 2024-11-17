@@ -5,7 +5,7 @@ const HeaderNav = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className='bg-black opacity-80 dark:bg-black md:fixed w-full z-20 top-0 start-0'>
+    <nav className='bg-black opacity-80 dark:bg-black lg:fixed w-full z-20 top-0 start-0'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
         <a href='/' className='flex items-center space-x-3 rtl:space-x-reverse'>
           <h1 className='text-p1 text-3xl md:text-5xl text-shadow'>DEGEN</h1>

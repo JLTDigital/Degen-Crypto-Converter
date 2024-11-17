@@ -5,7 +5,7 @@ import Footer from './sections/Footer.jsx'
 
 const App = () => {
   return (
-    <main className='dark-bg'>
+    <main className='lg:overflow-hidden overflow-scroll h-screen dark-bg'>
       <HeaderNav />
       <MainSection />
       <Footer />
